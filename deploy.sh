@@ -24,5 +24,5 @@ git add -A
 git commit -m 'deploy'
 
 # 发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f https://github.com/PeterWangYong/frontBook.git master:gh-pages
-git push https://gitee.com/PeterWangYong/frontBook.git master:gh-pages
+git push -f https://github.com/PeterWangYong/frontBook.git master:gh-pages
+git push -f https://gitee.com/PeterWangYong/frontBook.git master:gh-pages
