@@ -17,11 +17,14 @@
 2. 获取默认密码
 
    ```bash
-   docker logs -f jenkins_imooc
+   docker logs -f jenkins
    ```
 
-   ![image-20200805140730108](../.vuepress/public/img/jenkins/image-20200805140730108.png)
+   ![image-20200805140730108](../../images/jenkins/image-20200805140730108.png)
 
 3. 解锁Jenkins
 
    访问`http://localhost:11005`，填入密码解锁Jenkins
+
+   ![image-20200805145720278](../../images/jenkins/image-20200805145720278.png)
+
