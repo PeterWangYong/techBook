@@ -8,7 +8,7 @@ set -e
 
 # 源文档发布
 git add -A
-git commit -m $message
+git commit -m "$message"
 git push https://github.com/PeterWangYong/frontBook.git master
 git push https://gitee.com/PeterWangYong/frontBook.git master
 
