@@ -10,7 +10,7 @@ set -e
 git add -A
 git commit -m "$message"
 git push https://github.com/PeterWangYong/frontBook.git master
-# git push https://gitee.com/PeterWangYong/frontBook.git master
+git push https://gitee.com/PeterWangYong/frontBook.git master
 
 # 生成静态文件
 npm run docs:build
@@ -25,4 +25,4 @@ git commit -m 'deploy'
 
 # 发布到 https://<USERNAME>.github.io/<REPO>
 git push -f https://github.com/PeterWangYong/frontBook.git master:gh-pages
-# git push -f https://gitee.com/PeterWangYong/frontBook.git master:gh-pages
+git push -f https://gitee.com/PeterWangYong/frontBook.git master:gh-pages

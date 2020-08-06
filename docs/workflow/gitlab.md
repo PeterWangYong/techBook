@@ -77,7 +77,7 @@
        - GITLAB_SECRETS_OTP_KEY_BASE=long-and-random-alphanumeric-string
    
        - GITLAB_ROOT_PASSWORD=password			# 登录密码
-       - GITLAB_ROOT_EMAIL=admin@example.com	# 登录账号
+       - GITLAB_ROOT_EMAIL=root@example.com	# 对应root账号的邮箱
    
        - GITLAB_BACKUP_SCHEDULE=daily
        - GITLAB_BACKUP_TIME=01:00
