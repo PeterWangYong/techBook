@@ -2,7 +2,7 @@
 
 ## 什么是Jenkins
 
-##  Jenkins能做什么
+##  为什么使用Jenkins
 
 ## 安装部署
 
