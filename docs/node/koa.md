@@ -17,7 +17,18 @@ app.use(ctx => {
 app.listen(3000)
 ```
 
-## 常用中间件
+## 中间件
+
+### 基本定义
+
+```js
+module.exports = async function(ctx, next) {
+  console.log('pv', ctx.path)
+  await next()
+}
+```
+
+### 常用中间件
 
 - koa-body
 - @koa/cors
@@ -27,4 +38,34 @@ app.listen(3000)
 - koa-json
 - koa-router
 - koa-static
+
+## koa-generator
+
+```bash
+npm i -g koa-generator
+koa2 project
+
+cd koa2-learn && npm install
+npm run dev
+```
+
+## koa-router
+
+```js
+const router = require('koa-router')()
+router.prefix('/users')
+router.get('/', async(ctx, next) => {
+  ctx.body = "hello world"
+})
+return router
+
+app.use(router.routes(), router.allowedMethods())
+```
+
+## cookie和session
+
+```js
+ctx.cookies.set('pvid', Math.random())
+ctx.cookies.get('pvid')
+```
 
