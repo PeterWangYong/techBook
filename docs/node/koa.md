@@ -39,6 +39,18 @@ module.exports = async function(ctx, next) {
 - koa-router
 - koa-static
 
+## koa-body
+
+```bash
+const koaBody = require('koa-body')
+app.use(koaBody())
+router.get('/', ctx => {
+	console.log(ctx.request.body)
+})
+```
+
+
+
 ## koa-generator
 
 ```bash
@@ -68,4 +80,6 @@ app.use(router.routes(), router.allowedMethods())
 ctx.cookies.set('pvid', Math.random())
 ctx.cookies.get('pvid')
 ```
+
+## x-www-form-urlencoded
 

@@ -43,7 +43,22 @@
    docker-compose up -d
    ```
 
-   
+### 本地安装
+
+```bash
+mkdir -p /data/db
+cd /app
+curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-4.2.1.tgz 
+tar xf mongodb-linux-x86_64-rhel70-4.2.1.tgz
+export PATH=$PATH:/app/mongodb-linux-x86_64-rhel70-4.2.1/bin
+mongod --dbpath /data/db --port 27017 --logpath /data/db/mongod.log --fork –bind_ip 0.0.0.0
+```
+
+### 使用mongo-shell连接数据库
+
+```bash
+mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+```
 
 ## 常用命令
 
