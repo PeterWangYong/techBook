@@ -6,27 +6,32 @@
 
 ```css
 * {
-	color: red;
+  color: red;
 }
 ```
 
 ### 标签选择器
 
 ```css
-h1 {}
-h1,h2 {}
+h1 {
+}
+h1,
+h2 {
+}
 ```
 
 ### 类选择器
 
 ```css
-.success {}
+.success {
+}
 ```
 
-### ID选择器
+### ID 选择器
 
 ```css
-#content {}
+#content {
+}
 ```
 
 ### 结构选择器
@@ -34,106 +39,157 @@ h1,h2 {}
 1. 后代选择器
 
    ```css
-   main article h2 {}
+   main article h2 {
+   }
    ```
 
 2. 父子选择器
 
    ```css
-   main article>h2 {}
+   main article > h2 {
+   }
    ```
 
 3. 兄弟选择器
 
    ```css
-   article h1~h2 {}
+   article h1 ~ h2 {
+   }
    ```
 
 4. 紧邻兄弟选择器
 
    ```css
-   article h1+h2 {}
+   article h1 + h2 {
+   }
    ```
 
 ### 属性选择器
 
 ```css
-h1[title]{}
-h1[title][id] {}  /*有title和id两个属性*/
-h1[title="hello"] {}
-h1[title^="hello"] {} /*以hello开头*/
-h1[title$="hello"] {} /*以hello结尾*/
-h1[title*="hello"] {} /*存在hello就可以*/
-h1[title~="hello"] {} /*存在hello且必须是个单词, hi, hello world, hello两侧有空格*/
-h1[title|="hello"] {} /* 为hello或者hello-xxx */
+h1[title] {
+}
+h1[title][id] {
+} /*有title和id两个属性*/
+h1[title='hello'] {
+}
+h1[title^='hello'] {
+} /*以hello开头*/
+h1[title$='hello'] {
+} /*以hello结尾*/
+h1[title*='hello'] {
+} /*存在hello就可以*/
+h1[title~='hello'] {
+} /*存在hello且必须是个单词, hi, hello world, hello两侧有空格*/
+h1[title|='hello'] {
+} /* 为hello或者hello-xxx */
 ```
 
 ### 伪类选择器
 
 ```css
-a:link {}
-a:visited {}
-a:hover {}
-a:active {}
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
 
-input:focus {}
-input:hover {}
-input:active {}
+input:focus {
+}
+input:hover {
+}
+input:active {
+}
 
-div:target {} /* 点击锚点触发时，触发的目标样式 */
+div:target {
+} /* 点击锚点触发时，触发的目标样式 */
 
-:root {} /* 选择html页面 */
+:root {
+} /* 选择html页面 */
 li:empty {
   display: none;
 } /* 空元素设置 */
 
-
 /* 结构伪类选择器 */
-article :first-child {} /* article第一个子元素 */
-article>:first-child {}
-article h1:first-child {} /* 第一个元素且为h1 */
-article h1:first-of-type {} /* 第一个h1元素 */
-article :last-child {}
-article:last-child {}
+article :first-child {
+} /* article第一个子元素 */
+article > :first-child {
+}
+article h1:first-child {
+} /* 第一个元素且为h1 */
+article h1:first-of-type {
+} /* 第一个h1元素 */
+article :last-child {
+}
+article:last-child {
+}
 
 /* 伪类是对前面选择器的修饰 */
 
-article :only-child {} /* 存在唯一元素 */
-article>h1:only-of-type {}
+article :only-child {
+} /* 存在唯一元素 */
+article > h1:only-of-type {
+}
 
 /* 根据元素编号 */
-article :nth-child(1) {}
-article>:nth-child(2) {}
-article :nth-child(n) {}
-article :nth-child(2n) {}
-article :nth-child(2n-1) {}
-article :nth-child(odd) {}
-article :nth-child(even) {}
-article h1:nth-of-type(2) {}
+article :nth-child(1) {
+}
+article > :nth-child(2) {
+}
+article :nth-child(n) {
+}
+article :nth-child(2n) {
+}
+article :nth-child(2n-1) {
+}
+article :nth-child(odd) {
+}
+article :nth-child(even) {
+}
+article h1:nth-of-type(2) {
+}
 
-main>ul li:nth-last-child(2) {}
-main>ul li:nth-last-child(-n+2) {}
-article>h1:nth-last-child(1) {}
-article>h1:nth-last-of-type(1) {}
+main > ul li:nth-last-child(2) {
+}
+main > ul li:nth-last-child(-n + 2) {
+}
+article > h1:nth-last-child(1) {
+}
+article > h1:nth-last-of-type(1) {
+}
 
 /* 排除部分元素 */
-main>ul li:nth-child(-n+3):not(:nth-child(2)) {}
+main > ul li:nth-child(-n + 3):not(:nth-child(2)) {
+}
 
 /* 表单伪类 */
-input:disabled {} /* 禁用 */
-input:enabled {} /* 启用 */
-input:checked+label {} /* 选中 */
-input:required {}	/* 必填 */
-input:optional {} /* 非必填 */
-input:valid {} /* 验证有效 */
-input:invalid {} /* 验证无效 */
+input:disabled {
+} /* 禁用 */
+input:enabled {
+} /* 启用 */
+input:checked + label {
+} /* 选中 */
+input:required {
+} /* 必填 */
+input:optional {
+} /* 非必填 */
+input:valid {
+} /* 验证有效 */
+input:invalid {
+} /* 验证无效 */
 
 /* 伪元素 */
-p::first-letter {}
-p::first-line {}
-span::after {}
+p::first-letter {
+}
+p::first-line {
+}
+span::after {
+}
 span::before {
-  content: "xxx"
+  content: 'xxx';
 }
 /* 获取属性 */
 h2::before {
@@ -148,7 +204,6 @@ h2::before {
 1. 权重值
 
    ```css
-   
    /*
    id    								0100
    class,属性选择器				 0010
@@ -158,12 +213,11 @@ h2::before {
    
    权重可以叠加
    */
-   
+
    /* 11 */
    body .title {
      color: red;
    }
-   
    ```
 
 2. 强制权重
@@ -178,7 +232,7 @@ h2::before {
 
    子元素继承父元素的样式，继承样式没有权重。
 
-   通配符的权重为0，但是大于继承的权重。（因为继承没有权重，权重为NULL）
+   通配符的权重为 0，但是大于继承的权重。（因为继承没有权重，权重为 NULL）
 
 ## 文本修饰
 
@@ -186,15 +240,15 @@ h2::before {
 
 ```css
 h2 {
-  font-family: "Helvetica Neua", Arial, "Noto Sans";
+  font-family: 'Helvetica Neua', Arial, 'Noto Sans';
 }
 ```
 
 ```css
 @font-face {
-  font-family: "houdunren";
-  src: url("SourceHanSansSC-Heavy.otf") format("opentype"),
-    url("SourceHanSansSC-Light.otf") format("opentype");
+  font-family: 'houdunren';
+  src: url('SourceHanSansSC-Heavy.otf') format('opentype'), url('SourceHanSansSC-Light.otf')
+      format('opentype');
 }
 
 h2 {
@@ -217,10 +271,10 @@ h2 {
 
 ```css
 h2 {
-  color: red /* #dddddd #ddd rgb(255,0,0) rgba(255,0,0,0.5) */
+  color: red; /* #dddddd #ddd rgb(255,0,0) rgba(255,0,0,0.5) */
 }
 p {
-  line-height: 1.5em /* 20px */
+  line-height: 1.5em; /* 20px */
 }
 ```
 
@@ -236,7 +290,7 @@ h2 {
 
 ```css
 h2 {
-  font: bold italic 45px/1.5em 'Courier New' /* 字体和大小必须有 */
+  font: bold italic 45px/1.5em 'Courier New'; /* 字体和大小必须有 */
 }
 ```
 
@@ -244,7 +298,7 @@ h2 {
 
 ```css
 h2 {
-	font-variant: small-caps; /* uppercase lowercase capitalize */
+  font-variant: small-caps; /* uppercase lowercase capitalize */
 }
 ```
 
@@ -269,7 +323,7 @@ h2 {
 ```css
 h2 {
   white-space: pre; /* pre-wrap pre-line nowrap*/
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 ```
@@ -278,7 +332,7 @@ h2 {
 
 ```css
 p {
-  text-indent: 1em; 
+  text-indent: 1em;
   text-align: center; /* left right */
   vertical-align: middle; /* top bottom 60px */
 }
@@ -295,7 +349,7 @@ h2 {
 
 ### 排版模式
 
-```css 
+```css
 p {
   writing-mode: vertical-lr; /* vertical-rl 从右到左 horizontal-tb 水平从上到下*/
 }
@@ -306,9 +360,7 @@ p {
 ### 表格标题
 
 ```css
-<caption>课程介绍</caption>
-
-table caption {
+<caption > 课程介绍</caption > table caption {
   background: red;
   color: #fff;
   caption-side: top;
@@ -377,21 +429,25 @@ table tr:last-child td {
 }
 ```
 
-### CSS定制表格
+### CSS 定制表格
 
 ```css
-<article class="table">
-	<nav>课程介绍</nav>
-	<section>
-		<ul>
-			<li>编号</li>
-		</ul>
-	</section>
-	<section></section>
-	<section></section>
-</article>
-
-.table {
+<article
+  class='table'
+  > <nav
+  > 课程介绍</nav
+  > <section
+  > <ul
+  > <li
+  > 编号</li
+  > </ul
+  > </section
+  > <section
+  > </section
+  > <section
+  > </section
+  > </article
+  > .table {
   display: table;
   nav {
     display: table-caption;
@@ -491,7 +547,7 @@ article {
 }
 
 article {
-    background: red url(sj-small.png) no-repeat center;
+  background: red url(sj-small.png) no-repeat center;
 }
 ```
 
@@ -499,7 +555,7 @@ article {
 
 ```css
 div {
-  box-shadow: 10px 10px 10px rgba(100,100,100,1);
+  box-shadow: 10px 10px 10px rgba(100, 100, 100, 1);
   /*向右偏移 向下偏移 模糊度 颜色 */
 }
 ```
@@ -519,7 +575,7 @@ article {
   background: radial-gradient(red, green, blue);
   background: radial-gradient(100px, 100px, red, green, blue);
   background: radial-gradient(at top left, red, green, blue);
-	background: radial-gradient(at 50% 100%, red, green, blue);
+  background: radial-gradient(at 50% 100%, red, green, blue);
 }
 ```
 
@@ -527,7 +583,7 @@ article {
 
 ```css
 article {
-  background: linear-gradient(90deg, red 50%, green 60%)
+  background: linear-gradient(90deg, red 50%, green 60%);
 }
 ```
 
@@ -535,7 +591,7 @@ article {
 
 ```css
 article {
-  background: linear-gradient(90deg, red, 0%, green)
+  background: linear-gradient(90deg, red, 0%, green);
 }
 ```
 
@@ -543,7 +599,13 @@ article {
 
 ```css
 article {
-  background: repeating-linear-gradient(90deg, blue 25px, yellow 25px, 25px, red 50px);
+  background: repeating-linear-gradient(
+    90deg,
+    blue 25px,
+    yellow 25px,
+    25px,
+    red 50px
+  );
 }
 ```
 
@@ -557,8 +619,8 @@ article {
 }
 
 .div2 {
- 	margin-left: 100px;
-  margin-right: 40px
+  margin-left: 100px;
+  margin-right: 40px;
 }
 
 .div3 {
@@ -580,7 +642,6 @@ div {
   padding: 10px 20px 30px 40px;
 }
 /* padding-left, padding-right */
-
 ```
 
 ### 尺寸限制
@@ -621,7 +682,7 @@ div {
 
 ```css
 .div {
-  border-radius: 30px 40px 80px 100px; 
+  border-radius: 30px 40px 80px 100px;
 }
 
 .div2 {
@@ -661,17 +722,17 @@ h2 {
   display: none; /* block */
 }
 
-div>a {
+div > a {
   display: block;
   text-decoration: none;
-} 
+}
 
-ul>li {
+ul > li {
   display: inline-block; /* inline-block 可以设置宽高 */
 }
 
 div {
-  visibility: hidden;  /* 隐藏时保留空间位 */
+  visibility: hidden; /* 隐藏时保留空间位 */
 }
 ```
 
@@ -699,7 +760,7 @@ div {
 div {
   width: 300px;
   height: 300px;
-  /* min-width min-height max-width max-height */ 
+  /* min-width min-height max-width max-height */
 }
 
 img {
@@ -777,43 +838,38 @@ span {
 
 ```css
 div.red {
-	float: left;
+  float: left;
 }
 div.blue {
-	clear: left;
+  clear: left;
 }
 ```
 
 ```css
 div.red {
-	float: right;
+  float: right;
 }
 div.blue {
-	clear: right;
+  clear: right;
 }
 ```
 
 ```css
 div.red {
-	float: left;
+  float: left;
 }
 div.green {
   float: right;
 }
 div.blue {
-	clear: both;
+  clear: both;
 }
 ```
 
 ### 使用空元素或伪元素撑开父级元素
 
 ```css
-<main>
-	<div></div>
-  <article></article>
-</main
-
-div {
+<main > <div > </div > <article > </article > </main div {
   float: left;
 }
 article {
@@ -822,11 +878,7 @@ article {
 ```
 
 ```css
-<main>
-	<div></div>
-</main
-
-div {
+<main > <div > </div > </main div {
   float: left;
 }
 
@@ -836,14 +888,10 @@ main::after {
 }
 ```
 
-### 使用overflow触发BFC撑开父元素
+### 使用 overflow 触发 BFC 撑开父元素
 
 ```css
-<main>
-	<div></div>
-</main>
-
-div {
+<main > <div > </div > </main > div {
   float: left;
 }
 
@@ -854,12 +902,15 @@ main {
 
 ### 环绕距离控制
 
- ```css
-<p>
-	<div class=shape></div>
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-</p>
-p .shape {
+```css
+<p
+  > <div
+  class=shape
+  > </div
+  > xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  </p
+  > p
+  .shape {
   width: 100px;
   height: 100px;
   float: left;
@@ -867,23 +918,26 @@ p .shape {
   margin: 30px;
   shape-outside: border-box; /* padding-box margin-box content-box */
 }
- ```
+```
 
 ### 浮动显示区域形状
 
 ```css
-<p>
-	<div class=shape></div>
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-</p>
-p .shape {
+<p
+  > <div
+  class=shape
+  > </div
+  > xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  </p
+  > p
+  .shape {
   width: 100px;
   height: 100px;
   float: left;
   border: solid 1px red;
   margin: 30px;
   shape-outside: border-box; /* padding-box margin-box content-box */
-	clip-path: circle(50% at 100% 0);
+  clip-path: circle(50% at 100% 0);
   clip-path: ellipse(50%, 100%); /* 椭圆 */
   clip-path: polygon(50% 0, 100% 100%, 0 100%); /* 多边形 */
 }
@@ -893,8 +947,8 @@ p .shape {
 
 ```css
 p .shape {
-  clip-path: polygon(50% 0, 100% 100%, 0 100%); 
-  shape-outside: polygon(50% 0, 100% 100%, 0 100%); 
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  shape-outside: polygon(50% 0, 100% 100%, 0 100%);
 }
 ```
 
@@ -938,7 +992,7 @@ p img {
 
 ```css
 div {
-	position: absolute;
+  position: absolute;
   left: 200px;
   top: 0;
   right: 0;
@@ -980,7 +1034,7 @@ div {
 
 ### 元素层级
 
-``` css
+```css
 div {
   position: relative;
   z-index: -1;
@@ -1014,27 +1068,19 @@ h2 {
 
 display: flex
 
-> display: inline-flex 行级弹性盒子,类似inline-block
-
-
+> display: inline-flex 行级弹性盒子,类似 inline-block
 
 ### 弹性元素
 
 弹性盒子内的元素称为”弹性元素“。
 
-
-
 弹性布局实际上就是要对弹性元素的排列做各种设置。
-
-
 
 ### 排列方向
 
 flex-direction: row / row-reverse / column / column-reverse
 
-> 默认是row（从左向右）
-
-
+> 默认是 row（从左向右）
 
 ### 溢出换行
 
@@ -1042,29 +1088,25 @@ flex-wrap: wrap / wrap-reverse
 
 > 如果不添加溢出换行，默认溢出是元素自动调整宽高以适应。
 
-
-
 ### 组合设置
 
 flex-flow: row wrap
 
-> 同时设置flex-direction和flex-wrap。
-
-
+> 同时设置 flex-direction 和 flex-wrap。
 
 ### 主轴与交叉轴
 
-主轴由元素的排列方向决定即flex-direction。
+主轴由元素的排列方向决定即 flex-direction。
 
-> 如果flex-direction为row则主轴为水平从左向右，为row-reverse则主轴为水平从右向左。
+> 如果 flex-direction 为 row 则主轴为水平从左向右，为 row-reverse 则主轴为水平从右向左。
 >
-> 如果flex-direction为column则主轴为垂直从上往下，为column-reverse则主轴为垂直从下往上。
+> 如果 flex-direction 为 column 则主轴为垂直从上往下，为 column-reverse 则主轴为垂直从下往上。
 
-交叉轴由元素的换行方向决定即flex-wrap。
+交叉轴由元素的换行方向决定即 flex-wrap。
 
-> 如果flex-flow: row wrap 则 主轴水平，交叉轴垂直从上往下；flex-flow: row wrap-reverse 则 主轴水平，交叉轴垂直从下往上。
+> 如果 flex-flow: row wrap 则 主轴水平，交叉轴垂直从上往下；flex-flow: row wrap-reverse 则 主轴水平，交叉轴垂直从下往上。
 >
-> 如果flex-flow: column wrap 则主轴垂直，交叉轴水平从左向右；flex-flow: column wrap 则主轴垂直，交叉轴水平从右向左。
+> 如果 flex-flow: column wrap 则主轴垂直，交叉轴水平从左向右；flex-flow: column wrap 则主轴垂直，交叉轴水平从右向左。
 
 主轴和交叉轴对应于当前元素排列方向和换行方向。
 
@@ -1074,7 +1116,7 @@ flex-flow: row wrap
 
 justify-content: flex-start / flex-end / center / space-between / space-around / space-evenly
 
-> 默认为flex-start 即 靠在的主轴的开始端（比如主轴从左向右，则靠在左边）
+> 默认为 flex-start 即 靠在的主轴的开始端（比如主轴从左向右，则靠在左边）
 >
 > flex-start 即 靠在的主轴的结束端（比如主轴从左向右，则靠在右边）
 >
@@ -1088,31 +1130,29 @@ justify-content: flex-start / flex-end / center / space-between / space-around /
 
 ### 交叉轴的对齐和排列
 
-如前文所说，交叉轴始终和主轴垂直，并且起点和终点由flex-wrap决定。交叉轴的排列方式类似于主轴，但部分属性值不同。
+如前文所说，交叉轴始终和主轴垂直，并且起点和终点由 flex-wrap 决定。交叉轴的排列方式类似于主轴，但部分属性值不同。
 
-交叉轴的排列有两个属性：align-items,align-content。align-items表示元素整体的对齐方式,align-content表示元素在交叉轴的排列方式。
+交叉轴的排列有两个属性：align-items,align-content。align-items 表示元素整体的对齐方式,align-content 表示元素在交叉轴的排列方式。
 
-align-items: flex-start / flex-end / center / stretch 
+align-items: flex-start / flex-end / center / stretch
 
-> flex-start,flex-end,center表示元素整体对齐方式
+> flex-start,flex-end,center 表示元素整体对齐方式
 >
 > stretch 即 如果弹性元素本身没有宽高，则在交叉轴方向进行拉伸充满容器
 
 align-content: flex-start/ flex-end / center / space-between / space-around / space-evenly
 
->align-content和主轴排列方式相同。
+> align-content 和主轴排列方式相同。
 >
->align-content只有存在flex-wrap属性时才生效。
+> align-content 只有存在 flex-wrap 属性时才生效。
 
 ### 单个元素的交叉轴控制
 
-align-items表示整体元素的对齐方式，同时也可以对单个元素进行控制。
+align-items 表示整体元素的对齐方式，同时也可以对单个元素进行控制。
 
 align-self:flex-start / flex-end /stretch
 
-> align-self的效果和align-items类似只是作用于单个弹性元素
-
-
+> align-self 的效果和 align-items 类似只是作用于单个弹性元素
 
 ### 主轴基准尺寸
 
@@ -1120,19 +1160,15 @@ align-self:flex-start / flex-end /stretch
 
 flex-basis: 100px
 
-
-
 ### 元素可用空间的分配
 
 如果元素无法占满整行或整列，那么可以对剩余空间进行分配实现元素拉伸填充满整个空间。
 
 flex-grow: 1
 
-> flex-grow表示剩余空间分得几份，如果有两个div元素分别flex-grow:1, flex-grow:2且剩余空间为300px，则第一个div分得(300/3)*1=100px，第二个div分得(300/3)*2=200px;
+> flex-grow 表示剩余空间分得几份，如果有两个 div 元素分别 flex-grow:1, flex-grow:2 且剩余空间为 300px，则第一个 div 分得(300/3)*1=100px，第二个 div 分得(300/3)*2=200px;
 >
-> flex-grow是作用在主轴上的。
-
-
+> flex-grow 是作用在主轴上的。
 
 ### 元素缩小比例
 
@@ -1140,29 +1176,23 @@ flex-grow: 1
 
 flex-shrink: 1
 
-> flex-shrink 表示缩小的比例，但和flex-flow不同不能直接按照“要缩小的总像素”进行切分，而是通过一个公式：（200 / (1\*200+2\*400))\*1\*200【假设“要缩小的总像素”为200px，两个div宽度为200px,400px;缩小比例为:1,2，则计算结果为第一个div要缩小的像素】
-
-
+> flex-shrink 表示缩小的比例，但和 flex-flow 不同不能直接按照“要缩小的总像素”进行切分，而是通过一个公式：（200 / (1\*200+2\*400))\*1\*200【假设“要缩小的总像素”为 200px，两个 div 宽度为 200px,400px;缩小比例为:1,2，则计算结果为第一个 div 要缩小的像素】
 
 ### 元素组合定义
 
-flex-grow,flex-shrink,flex-basis可以组合定义为flex。
+flex-grow,flex-shrink,flex-basis 可以组合定义为 flex。
 
 flex: 1 1 100px;
 
 > 等同于 flex-grow:1; flex-shrink:1; flex-basis: 100px;
 
-
-
 ### 元素的排列顺序
 
-可以通过order属性控制弹性元素的顺序
+可以通过 order 属性控制弹性元素的顺序
 
 order: 1
 
-> order默认数值为0，数值越大越往后排
-
-
+> order 默认数值为 0，数值越大越往后排
 
 ### 对文本进行弹性布局
 
@@ -1171,19 +1201,18 @@ order: 1
 ```html
 <!-- 水平垂直居中 -->
 <style>
-        article {
-            width: 200px;
-            height: 200px;
-            border: solid 2px red;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
+  article {
+    width: 200px;
+    height: 200px;
+    border: solid 2px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
 
 <article>hello</article>
-
 ```
 
 ### 多级菜单布局案例
@@ -1191,98 +1220,97 @@ order: 1
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+      }
 
-        body {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: #eee;
-        }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #eee;
+      }
 
-        main {
-            flex: 1;
-        }
+      main {
+        flex: 1;
+      }
 
-        footer {
-            height: 50px;
-            background-color: #ccc;
-            display: flex;
-        }
+      footer {
+        height: 50px;
+        background-color: #ccc;
+        display: flex;
+      }
 
-        footer section {
-            display: flex;
-            flex-direction: column-reverse;
-            flex: 1;
-            border-right: solid 1px #bbb;
-        }
+      footer section {
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 1;
+        border-right: solid 1px #bbb;
+      }
 
-        footer section:last-child {
-            border-right: none;
-        }
+      footer section:last-child {
+        border-right: none;
+      }
 
-        footer section h4 {
-            flex: 0 0 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
+      footer section h4 {
+        flex: 0 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
 
-        footer section ul {
-            display: flex;
-            flex-direction: column;
-            margin: 5px;
-            border: solid 1px #bbb;
-            border-radius: 10px;
-        }
+      footer section ul {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        border: solid 1px #bbb;
+        border-radius: 10px;
+      }
 
-        footer section ul li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 0 0 50px;
-            border-bottom: solid 1px #bbb;
-            cursor: pointer;
-        }
+      footer section ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 50px;
+        border-bottom: solid 1px #bbb;
+        cursor: pointer;
+      }
 
-        footer section ul li:last-child {
-            border-bottom: none;
-        }
-
+      footer section ul li:last-child {
+        border-bottom: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main></main>
     <footer>
-        <section>
-            <h4>教程</h4>
-            <ul>
-                <li>Java</li>
-                <li>CSS</li>
-            </ul>
-        </section>
-        <section>
-            <h4>问答</h4>
-        </section>
-        <section>
-            <h4>直播</h4>
-        </section>
+      <section>
+        <h4>教程</h4>
+        <ul>
+          <li>Java</li>
+          <li>CSS</li>
+        </ul>
+      </section>
+      <section>
+        <h4>问答</h4>
+      </section>
+      <section>
+        <h4>直播</h4>
+      </section>
     </footer>
-</body>
+  </body>
 </html>
 ```
 
-![img](../../images/css/1192583-20200502105843462-738093522.png)
+![img](../../../images/css/1192583-20200502105843462-738093522.png)
 
 ## 栅格布局
 
@@ -1293,7 +1321,7 @@ article {
   width: 300px;
   height: 300px;
   border: solid 5px silver;
-	display: grid;  /* inline-grid */
+  display: grid; /* inline-grid */
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1331,7 +1359,7 @@ article {
   display: grid;
   grid-template-rows: repeat(2, 50%);
   /* grid-template-rows: repeat(2, 100px, 50px); */ /* 绘制4行：100 50 100 50 */
-  grid-template-columns: repeat(5, 20%); 
+  grid-template-columns: repeat(5, 20%);
 }
 ```
 
@@ -1351,7 +1379,7 @@ article {
 }
 ```
 
-### minmax控制尺寸波动范围
+### minmax 控制尺寸波动范围
 
 ```css
 article {
@@ -1420,13 +1448,13 @@ article {
   height: 300px;
   border: solid 5px silver;
   display: grid;
-  grid-template-rows: repeat(3,[r-start] 1fr [r-end]);
+  grid-template-rows: repeat(3, [r-start] 1fr [r-end]);
   grid-template-columns: repeat(3, [c-start] 1fr [c-end]);
 }
 
 div:first-child {
-	grid-row-start: r-start 1; /* 第一行的开始 */
-	grid-column-start: c-start 1; /* 第一列的开始 */
+  grid-row-start: r-start 1; /* 第一行的开始 */
+  grid-column-start: c-start 1; /* 第一列的开始 */
   grid-row-end: r-end 1;
   grid-column-end: c-end 3;
 }
@@ -1470,9 +1498,12 @@ article {
   display: grid;
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 60px 1fr;
-  grid-template-areas: "header header" "nav main" "footer footer"
+  grid-template-areas: 'header header' 'nav main' 'footer footer';
 }
-header,nav,main,footer {
+header,
+nav,
+main,
+footer {
   background: blueviolet;
   background-clip: content-box;
   padding: 10px;
@@ -1504,7 +1535,7 @@ article {
   display: grid;
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 60px 1fr;
-  grid-template-areas: "header header" "nav main" "footer footer"
+  grid-template-areas: 'header header' 'nav main' 'footer footer';
 }
 /* 系统自动命名栅格线 header-start header-start header-end header-end */
 
@@ -1522,9 +1553,8 @@ article {
   display: grid;
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 60px 1fr;
-  grid-template-areas: ". ." ". ." "footer footer"; /* 用不上的名字使用 . 占位 */
+  grid-template-areas: '. .' '. .' 'footer footer'; /* 用不上的名字使用 . 占位 */
 }
-
 ```
 
 ### 栅格流动处理机制
@@ -1538,7 +1568,7 @@ article {
   grid-template-rows: repeat(2, minmax(50px, 100px));
   grid-template-columns: repeat(5, 1fr);
   grid-auto-flow: column; /* 默认row */
-  grid-auto-flow: row dense; /* dense 自动将空间填满 */ 
+  grid-auto-flow: row dense; /* dense 自动将空间填满 */
 }
 ```
 
@@ -1565,7 +1595,7 @@ article {
   border: solid 5px silver;
   display: grid;
   grid-template-columns: repeat(4, 100px);
-	justify-items: start; /* end center stretch(默认) */
+  justify-items: start; /* end center stretch(默认) */
   align-items: stretch; /* start end center */
 }
 ```
@@ -1588,7 +1618,7 @@ article {
   border: solid 5px silver;
   display: grid;
   grid-template-columns: repeat(4, 100px);
-	place-content: center space-between; /* 栅格整体对齐 */
+  place-content: center space-between; /* 栅格整体对齐 */
   place-items: start end; /* 栅格内元素对齐 行 列*/
 }
 
@@ -1625,18 +1655,18 @@ div:hover {
 
 ```css
 div {
-  transition-property: background; /* 只让背景过渡 */ 
+  transition-property: background; /* 只让背景过渡 */
   /* transition-property: background,width,border; */
   transition-duration: 2s;
 }
 ```
 
-### transitionend事件
+### transitionend 事件
 
 当动画结束的时候会触发该事件
 
 ```javascript
-const div = document.querySelector('div');
+const div = document.querySelector('div')
 div.addEventListener('transitionend', event => {})
 ```
 
@@ -1649,13 +1679,13 @@ div {
 }
 ```
 
-###控制运行轨迹 
+###控制运行轨迹
 
 ```css
 div {
   transition-timing-function: ease; /* 默认值 */  /* linear ease-in ease-out ease-in-out */
   /* transition-timing-function: cubic-bezier(.78,0,.18,1)
-  
+
 }
 ```
 
@@ -1667,7 +1697,7 @@ div {
 }
 ```
 
-### step-end和step-start
+### step-end 和 step-start
 
 ```css
 div {
@@ -1675,7 +1705,7 @@ div {
 }
 ```
 
-### transition-delay延时过渡
+### transition-delay 延时过渡
 
 ```css
 div {
@@ -1683,12 +1713,12 @@ div {
 }
 
 div {
-  transition-delay: 1s 200ms;  /* 如果延时时间少于过渡属性，那么会从头再次获取延时时间 */
+  transition-delay: 1s 200ms; /* 如果延时时间少于过渡属性，那么会从头再次获取延时时间 */
   transition-property: background, width, height, border-radius;
 }
 ```
 
-### transition组合设置
+### transition 组合设置
 
 ```css
 div {
@@ -1704,7 +1734,7 @@ div {
 
 ### 坐标轴
 
-X Y Z 
+X Y Z
 
 ### translate 控制二维移动
 
@@ -1719,7 +1749,7 @@ transform: translateX(100%) translateY(100px);
 transform: translate(100%, 100px);
 ```
 
-### translate3d控制3D移动
+### translate3d 控制 3D 移动
 
 ```css
 perspective(900px);
@@ -1765,13 +1795,13 @@ rotateZ(360deg)
 
 ```
 
-### 平面2d旋转
+### 平面 2d 旋转
 
 ```css
 rotate(360deg)
 ```
 
-### rotate3d旋转
+### rotate3d 旋转
 
 ```css
 rotate3d(1, 0, 0, 95deg)
@@ -1785,7 +1815,7 @@ transform: skewY(45deg)
 transform: skew(-45deg, 45deg)
 ```
 
-### 2D变形参考点
+### 2D 变形参考点
 
 ```css
 transform: rotate(45deg)
@@ -1796,7 +1826,7 @@ transform-origin: 100% 100%
 transform-origin: 200% 200%
 ```
 
-### 3D变形参考点
+### 3D 变形参考点
 
 ```css
 transform-origin: left bottom 100px;
@@ -1844,7 +1874,7 @@ div {
   from {
     background: white;
   }
-  
+
   to {
     background: red;
   }
@@ -1856,15 +1886,15 @@ div {
   0% {
     background: white;
   }
-  
+
   25% {
     transform: scale(2);
   }
-  
+
   65% {
     transform: scale(1);
   }
-  
+
   100% {
     background: red;
   }
@@ -1906,7 +1936,7 @@ div {
   50% {
     transform: translate(300px, 300px);
   }
-  
+
   75% {
     transform: translateY(300px);
   }
@@ -1925,12 +1955,13 @@ div {
     transform: translate(300px, 300px);
     background: yellow;
   }
-  
+
   75% {
     transform: translateY(300px);
     /* background: red; */
   }
-  25%, 75% {
+  25%,
+  75% {
     background: red;
     border-radius: 50%;
   }
@@ -1945,7 +1976,7 @@ div {
   height: 100px;
   background: #f1c40f;
   animation-name: translate, background, radius;
-  animation-duration: 4s 2s; /* radius 执行 4s，按顺序 4 2 4 2 4 2 ... */ 
+  animation-duration: 4s 2s; /* radius 执行 4s，按顺序 4 2 4 2 4 2 ... */
 }
 ```
 
@@ -1957,7 +1988,7 @@ div {
   height: 100px;
   background: #f1c40f;
   animation-name: translate, background, radius;
-  animation-duration: 4s 2s; /* radius 执行 4s，按顺序 4 2 4 2 4 2 ... */ 
+  animation-duration: 4s 2s; /* radius 执行 4s，按顺序 4 2 4 2 4 2 ... */
 }
 /* 如果background和translate出现相同的属性，那么取background，谁在后面谁的优先级高 */
 ```
@@ -1977,17 +2008,17 @@ main {
 
 @keyframes scale {
   25% {
-    transform: scale(0.5)
+    transform: scale(0.5);
   }
-  
+
   50% {
     transform: scale(1);
   }
-  
+
   75% {
     transform: scale(0.5);
   }
-  
+
   100% {
     transform: scale(1);
   }
@@ -2004,7 +2035,7 @@ div {
   background: yellow;
   animation-name: scale;
   animation-duration: 2s;
-  border: solid 2px #ddd;;
+  border: solid 2px #ddd;
 }
 @keyframes scale {
   to {
@@ -2074,7 +2105,7 @@ body {
 }
 
 .heart::before {
-  content: "";
+  content: '';
   background: red;
   width: 200px;
   height: 200px;
@@ -2084,7 +2115,7 @@ body {
 }
 
 .heart::after {
-  content: "";
+  content: '';
   background: red;
   width: 200px;
   height: 200px;
@@ -2096,13 +2127,13 @@ body {
 
 ### 动画方向
 
-从 0 - 100 ， 瞬间到0
+从 0 - 100 ， 瞬间到 0
 
-从100 - 0 ， 瞬间回到100
+从 100 - 0 ， 瞬间回到 100
 
-从0 - 100，慢慢回到0
+从 0 - 100，慢慢回到 0
 
-从100 - 0，慢慢回到100
+从 100 - 0，慢慢回到 100
 
 ```css
 ul {
@@ -2206,7 +2237,7 @@ li {
 }
 
 li {
-  animation-timing-function: cubic-bezier(.26,.53,1,.3);
+  animation-timing-function: cubic-bezier(0.26, 0.53, 1, 0.3);
 }
 ```
 
@@ -2259,35 +2290,37 @@ li {
 }
 ```
 
-
-
 ## CSS 去除图片和父元素底部间隙
 
 ### 场景
-由于行内元素默认vertical-align按照基线(base-line)对齐，而父元素的border-bottom对应着行内元素的底线(bottom)，所以默认情况下图片会与父元素产生底部间隙。
-![](../../images/css/1192583-20200703145253593-921808376.png)
+
+由于行内元素默认 vertical-align 按照基线(base-line)对齐，而父元素的 border-bottom 对应着行内元素的底线(bottom)，所以默认情况下图片会与父元素产生底部间隙。
+![](../../../images/css/1192583-20200703145253593-921808376.png)
 
 ### 去除间隙
-1. vertical-align按照bottom对齐
-      ```css
-      img {
-        vertical-align: bottom;
-      }
-      ```
 
-2. img变为block元素
-      ```css
-      img {
-        display: block;
-      }
-      ```
+1. vertical-align 按照 bottom 对齐
 
-3. 浮动img
-      ```css
-      div {
-        overflow: hidden;   /* 父元素触发BFC撑开 */
-      }
-      img {
-        float: left;
-      }
-      ```
+   ```css
+   img {
+     vertical-align: bottom;
+   }
+   ```
+
+2. img 变为 block 元素
+
+   ```css
+   img {
+     display: block;
+   }
+   ```
+
+3. 浮动 img
+   ```css
+   div {
+     overflow: hidden; /* 父元素触发BFC撑开 */
+   }
+   img {
+     float: left;
+   }
+   ```

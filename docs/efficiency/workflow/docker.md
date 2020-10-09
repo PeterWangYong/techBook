@@ -1,29 +1,29 @@
 # Docker
 
-## 什么是Docker？
+## 什么是 Docker？
 
-Docker是免费的虚拟机引擎，可以为任何应用创建一个轻量级的、可移植的容器。
+Docker 是免费的虚拟机引擎，可以为任何应用创建一个轻量级的、可移植的容器。
 
-### Docker镜像
+### Docker 镜像
 
-1. Docker虚拟机镜像是一个只读层，不能写入数据。
-2. 我们可以通过dockerfile文件，定义需要安装的程序，然后创建出镜像文件。
+1. Docker 虚拟机镜像是一个只读层，不能写入数据。
+2. 我们可以通过 dockerfile 文件，定义需要安装的程序，然后创建出镜像文件。
 
-### Docker容器
+### Docker 容器
 
-1. Docker容器是一个虚拟的实例，里面的内容可读可写。
+1. Docker 容器是一个虚拟的实例，里面的内容可读可写。
 2. 容器是完全隔离的，我们不用担心部署程序会相互干扰。
 3. 一个镜像可以创建出多个容器。
 
-## 为什么使用Docker？
+## 为什么使用 Docker？
 
-VM虚拟机创建的是完整的虚拟系统，所以对占用硬件较高，属于重量级虚拟机。
+VM 虚拟机创建的是完整的虚拟系统，所以对占用硬件较高，属于重量级虚拟机。
 
-Docker虚拟机创建的虚拟实例共用同一个系统内核，对硬件占用较小，属于轻量级虚拟机。
+Docker 虚拟机创建的虚拟实例共用同一个系统内核，对硬件占用较小，属于轻量级虚拟机。
 
 ## 安装部署
 
-1. 在CentOS上安装Docker虚拟机
+1. 在 CentOS 上安装 Docker 虚拟机
 
    ```bash
    yum install -y docker
@@ -45,35 +45,35 @@ Docker虚拟机创建的虚拟实例共用同一个系统内核，对硬件占�
 
 ### 镜像与仓库
 
-1. search 从DockerHub中查询镜像
+1. search 从 DockerHub 中查询镜像
 2. push 推送镜像到仓库
 3. pull 从仓库拉取镜像到本地
 
 ### 镜像与文件
 
-1. save 导出镜像为tar文件
+1. save 导出镜像为 tar 文件
 
    ```bash
    docker save -o ./openjdk.ta.gz docker.io/openjdk
    ```
 
-2. load 从tar文件导入镜像
+2. load 从 tar 文件导入镜像
 
    ```bash
    docker load < ./openjdk.tar.gz
    ```
 
-3. build 从Dockerfile文件构建镜像
+3. build 从 Dockerfile 文件构建镜像
 
 ## DockerCompose
 
-### 什么是DockerCompose？
+### 什么是 DockerCompose？
 
-### 为什么使用DockerCompose？
+### 为什么使用 DockerCompose？
 
 ### 安装部署
 
-1. 下载docker-compose
+1. 下载 docker-compose
 
    ```bash
    curl -L https://get.daocloud.io/docker/compose/releases/download/1.26.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
@@ -95,9 +95,9 @@ Docker虚拟机创建的虚拟实例共用同一个系统内核，对硬件占�
 
 ### docker-compose.yml
 
-docker-compose.yml用于配置docker-compose要管理的容器信息。
+docker-compose.yml 用于配置 docker-compose 要管理的容器信息。
 
-以安装mongodb为例：
+以安装 mongodb 为例：
 
 ```yaml
 version: '3.1'
@@ -105,7 +105,7 @@ services:
 	mongo:
 		image: mongo
     	restart: always
-    	environment: 
+    	environment:
 			MONGO_INITDB_ROOT_USERNAME: root
         	MONGO_INITDB_ROOT_PASSWORD: password
     	ports:
@@ -132,7 +132,7 @@ services:
 
 1. 获取加速器
 
-   ![image-20200806140451588](../../images/docker/image-20200806140451588.png)
+   ![image-20200806140451588](../../../images/docker/image-20200806140451588.png)
 
 2. 修改配置文件
 
@@ -141,11 +141,8 @@ services:
    {"registry-mirrors": ["https://xxxxxx.mirror.aliyuncs.com"]}
    ```
 
-3. 重启docker
+3. 重启 docker
 
    ```bash
    systemctl restart docker
    ```
-
-   
-
