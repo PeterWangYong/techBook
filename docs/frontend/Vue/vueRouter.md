@@ -1,3 +1,5 @@
+# VueRouter
+
 ```
 npm install vue-router
 ```
@@ -18,7 +20,7 @@ this.$router.go()
 
 ```js
 routes: [
-	{ 
+	{
 		path: '/home',
 		name: 'home'
 		component: 'xxx',
@@ -32,7 +34,7 @@ routes: [
 		beforeEnter((to, from, next) => {}),
 		meta: {requireAuth: true}
 	},
-	{ 
+	{
 		path: '/user/:id'   // this.$route.params.id,
 		component: () => import('../xxx')
 	},
@@ -42,12 +44,12 @@ routes: [
 	},
 	{
 		path: '/food/:id',
-		components: {	   
+		components: {
 			a: 'xxx',			// <router-view name="a"/>
 			b: 'xxx',			// <router-view name="b"/>
 		},
 		props: {
-			a: true,     // component: <template><div>{{id}}</div></template>  
+			a: true,     // component: <template><div>{{id}}</div></template>
 			b: false		 // <script>export 	default { props: ['id']}
 		}
 	},
@@ -81,13 +83,12 @@ export default {
 
 ```html
 <transition>
-	<router-view></router-view>
+  <router-view></router-view>
 </transition>
 
 <template>
-	<transition name="slide">
-  	<div>
-    </div>
+  <transition name="slide">
+    <div></div>
   </transition>
 </template>
 ```
