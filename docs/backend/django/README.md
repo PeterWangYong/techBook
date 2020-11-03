@@ -1,4 +1,3 @@
-# Django简介
+# Django 简介
 
-Django是流行的PythonWeb框架
-
+Django 是流行的 PythonWeb 框架

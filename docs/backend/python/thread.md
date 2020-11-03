@@ -478,3 +478,19 @@ print(event.is_set())
 
 我们看线程同步的这几种方式本质都是基于Lock的，Lock是语言的原生机制（C语言实现），其他的Conditon，Semaphore和Event都是在Lock的基础上针对不同的场景派生而来。
 
+## 线程池
+
+```python
+import time
+import concurrent.futures
+
+
+def run(ident):
+    time.sleep(5)
+    print(f"{ident} is running")
+
+
+with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    executor.map(run, [1, 2, 3, 4, 5])
+```
+

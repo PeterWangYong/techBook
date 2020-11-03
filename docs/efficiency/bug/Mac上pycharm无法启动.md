@@ -1,12 +1,8 @@
-# Pycharm Mac 无法启动
-
-
+# Mac 上 pycharm 无法启动
 
 ## 场景
 
-Mac安装Pycharm，点击图标无法启动，总是自动退出
-
-
+Mac 安装 Pycharm，点击图标无法启动，总是自动退出
 
 ## 解决方案
 
@@ -22,7 +18,7 @@ Mac安装Pycharm，点击图标无法启动，总是自动退出
    Error opening zip file or JAR manifest missing : /Applications/PyCharm.app/Contents/bin/jetbrains-agent.jar
    Error occurred during initialization of VM
    agent library failed to init: instrument
-   [Caches]$cd /Users/wangyong/Library/Application 
+   [Caches]$cd /Users/wangyong/Library/Application
    ```
 
-2. 删除/Users/wangyong/Library/Application Support/JetBrains/PyCharm2020.2/pycharm.vmoptions即可启动
+2. 删除/Users/wangyong/Library/Application Support/JetBrains/PyCharm2020.2/pycharm.vmoptions 即可启动
