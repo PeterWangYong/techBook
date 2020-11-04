@@ -33,3 +33,19 @@ kong migrations bootstrap [-c /path/to/kong.conf]
 
 kong start [-c /path/to/kong.conf]
 ```
+
+## Konga 部署
+
+> 依赖 NodeJS8+
+
+```bash
+git clone https://github.com/pantsel/konga.git
+cd konga
+npm i
+
+# 修改配置，如果没有.env则按照默认配置
+cp .env_example .env
+
+npm start // 开发模式
+npm run production // 生产模式
+```
