@@ -16,7 +16,7 @@ git push https://github.com/PeterWangYong/techBook.git master
 git push https://gitee.com/PeterWangYong/tech-book.git master
 
 # 生成静态文件
-npm run docs:build
+npm run build
 
 # 添加README
 cp README.md $DIST
