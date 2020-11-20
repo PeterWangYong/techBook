@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "push": "sh deploy.sh"
   },
   "keywords": [],
   "author": "",
