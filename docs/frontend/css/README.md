@@ -1,4 +1,4 @@
-# CSS
+# 基础知识
 
 ## 元素选择器
 
@@ -1667,7 +1667,7 @@ div {
 
 ```javascript
 const div = document.querySelector('div')
-div.addEventListener('transitionend', event => {})
+div.addEventListener('transitionend', (event) => {})
 ```
 
 ### 过渡时间
