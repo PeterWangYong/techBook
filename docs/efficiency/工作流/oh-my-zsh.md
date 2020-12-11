@@ -1,7 +1,5 @@
 # oh my zsh
 
-
-
 ## 插件
 
 `zsh-autosuggestion` 自动提示
