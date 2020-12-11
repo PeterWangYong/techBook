@@ -4,7 +4,7 @@
 
 ## 条件语句
 
-![img](../../../images/condition_and_loop/949742df36600c086c31e399ce515f45.png)
+![img](https://gitee.com/PeterWangYong/blog-image/raw/master/images/949742df36600c086c31e399ce515f45.png)
 
 ## 循环语句
 

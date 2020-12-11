@@ -132,7 +132,7 @@ services:
 
 1. 获取加速器
 
-   ![image-20200806140451588](../../../images/docker/image-20200806140451588.png)
+   ![image-20200806140451588](https://gitee.com/PeterWangYong/blog-image/raw/master/images/image-20200806140451588.png)
 
 2. 修改配置文件
 

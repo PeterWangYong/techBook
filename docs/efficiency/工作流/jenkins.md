@@ -20,10 +20,10 @@
    docker logs -f jenkins
    ```
 
-   ![image-20200805140730108](../../../images/jenkins/image-20200805140730108.png)
+   ![image-20200805140730108](https://gitee.com/PeterWangYong/blog-image/raw/master/images/image-20200805140730108.png)
 
 3. 解锁 Jenkins
 
    访问`http://localhost:11005`，填入密码解锁 Jenkins
 
-   ![image-20200805145720278](../../../images/jenkins/image-20200805145720278.png)
+   ![image-20200805145720278](https://gitee.com/PeterWangYong/blog-image/raw/master/images/image-20200805145720278.png)

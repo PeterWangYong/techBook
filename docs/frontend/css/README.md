@@ -1310,7 +1310,7 @@ order: 1
 </html>
 ```
 
-![img](../../../images/css/1192583-20200502105843462-738093522.png)
+![img](https://gitee.com/PeterWangYong/blog-image/raw/master/images/1192583-20200502105843462-738093522.png)
 
 ## 栅格布局
 
@@ -2295,7 +2295,8 @@ li {
 ### 场景
 
 由于行内元素默认 vertical-align 按照基线(base-line)对齐，而父元素的 border-bottom 对应着行内元素的底线(bottom)，所以默认情况下图片会与父元素产生底部间隙。
-![](../../../images/css/1192583-20200703145253593-921808376.png)
+
+![](https://gitee.com/PeterWangYong/blog-image/raw/master/images/1192583-20200703145253593-921808376.png)
 
 ### 去除间隙
 
