@@ -2,6 +2,36 @@
 
 ## 什么是Axios？
 
+基于Promise的HTTP客户端
+
+
+
+## 安装
+
+```shell
+npm install axios
+```
+
+
+
+## API
+
+### axios(config)
+
+```js
+axios({
+  method: 'post', 
+  url: '/user/12345',
+  data: {
+		firstName: 'Fred',
+    secondName: 'Flintstone'
+  },
+  headers: {
+    Authorization: 'Bearer xxxx'
+  }
+}).then(response => {})
+```
+
 
 
 ## 注意事项
