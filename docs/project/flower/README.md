@@ -6,6 +6,16 @@
 
 Flower是一个文章电影信息展示应用。
 
+### 体验版二维码
+
+<img src="https://gitee.com/PeterWangYong/blog-image/raw/master/images/oF-2u4vweLUSqLCqzVE8MxzrUhG4.jpg" alt="Flower小程序二维码" style="zoom:50%;" />
+
+
+
+### 源码地址
+
+[Flower源码](https://github.com/PeterWangYong/flower.git)
+
 ## 项目功能
 
 ### 文章
