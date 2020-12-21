@@ -1,4 +1,4 @@
-# VueRouter
+# vue-router
 
 ```
 npm install vue-router
