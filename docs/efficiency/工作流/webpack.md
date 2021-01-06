@@ -6,6 +6,46 @@
 
 ## 配置案例
 
+### 最简开发环境配置
+
+```sh
+npm install webpack webpack-cli webpack-dev-server -D
+npm install style-loader css-loader stylus-loader stylus -D
+npm install html-webpack-plugin -D
+```
+
+```js
+// webpack.config.js
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+
+module.exports = {
+  entry: path.resolve(__dirname, 'src/index.js'),
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  devServer: {
+    open: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.styl$/,
+        use: ['style-loader', 'css-loader', 'stylus-loader'],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
+    }),
+  ],
+}
+```
+
+
+
 ### 面向Node环境
 
 ```js
@@ -46,6 +86,10 @@ const webpackconfig = {
 
 module.exports = webpackconfig
 ```
+
+
+
+
 
 ## 分环境配置
 
