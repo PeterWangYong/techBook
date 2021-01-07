@@ -34,4 +34,4 @@ git commit -m 'deploy'
 # git push -f https://github.com/PeterWangYong/techBook.git master:gh-pages
 # git push -f https://gitee.com/PeterWangYong/tech-book.git master:gh-pages
 # git push -f https://github.com/PeterWangYong/peterwangyong.github.io.git master
-git push -f https://gitee.com/PeterWangYong/peterwangyong.git master
+git push -f https://gitee.com/PeterWangYong/PeterWangYong.git master
