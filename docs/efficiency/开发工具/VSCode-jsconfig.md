@@ -1,5 +1,7 @@
 # jsconfig.json
 
+## 介绍
+
 jsconfig.json用于vscode读取并优化js项目的使用体验。
 
 jsconfig.json继承自tsconfig.json，所以有些属性不生效。
