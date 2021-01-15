@@ -120,3 +120,52 @@ dataTransfer属性用于存储拖动相关的数据，这个对象在不同的Dr
 
 ```
 
+## 拖动时隐藏原来位置上的元素
+
+```css
+.hide {
+  transition: 0.01s; /* 一定要有过渡，否则无法获取拖动图像 */
+  transform: translateX(-9999px);
+}
+```
+
+```js
+// dragstart
+e.addEventListener('dragstart', ev => {
+  ev.target.classList.add('hide')
+})
+
+// drop
+const e = main.querySelelctor('#rect')
+e.classList.remove('hide')
+```
+
+https://stackoverflow.com/questions/36379184/html5-draggable-hide-original-element
+
+
+
+## 修正元素左上角坐标
+
+我们需要根据鼠标在拖动元素和放置元素的相对位置计算出元素左上角的坐标（绝对定位）
+
+```js
+// dragstart
+e.addEventListener('dragstart', ev => {
+  ev.dataTransfer.setData('innerOffsetX', ev.offsetX);
+  ev.dataTransfer.setData('innerOffsetY', ev.offsetY);
+})
+
+// drop
+const e = main.querySelector(`#rect`);
+const innerOffsetX = parseInt(
+  event.dataTransfer.getData('innerOffsetX')
+);
+const innerOffsetY = parseInt(
+  event.dataTransfer.getData('innerOffsetY')
+);
+e.style.left = `${event.offsetX - innerOffsetX}px`;
+e.style.top = `${event.offsetY - innerOffsetY}px`;
+
+// offsetX/Y 鼠标相对于事件触发元素的坐标
+```
+

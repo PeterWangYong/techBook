@@ -543,6 +543,9 @@ moment('2020-02-18 09:22:15').format('YYYY-MM-DD HH:mm:ss')
 moment()
   .add(10, 'days')
   .format('YYYY-MM-DD hh:mm:ss')
+
+// 本地时间获取
+new Date(+new Date() + 8 * 3600 * 1000);
 ```
 
 ## 正则表达式
