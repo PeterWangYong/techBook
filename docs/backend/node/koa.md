@@ -81,5 +81,22 @@ ctx.cookies.set('pvid', Math.random())
 ctx.cookies.get('pvid')
 ```
 
-## 常见问题
+## 文件下载
+
+```js
+router.get('/download', async (ctx) => {
+  ctx.set({
+    'Content-Type': 'application/octet-stream',
+    'Content-Deposition': 'attachment;filename=FileName.txt',
+  });
+
+  const fileStream = fs.createReadStream(
+    path.resolve(__dirname, '../file.txt')
+  );
+
+  ctx.body = fileStream;
+});
+```
+
+
 

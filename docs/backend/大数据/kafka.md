@@ -75,12 +75,12 @@ cp config/server.properties config/server-2.properties
 ```properties
 vim config/server-1.properties
 	broker.id=1
-	listeners=PLAINTEXT://:9093
+	listeners=PLAINTEXT://0.0.0.0:9093
 	log.dirs=/tmp/kafka-logs-1
 
 vim config/server-2.properties
 	broker.id=2
-	listeners=PLAINTEXT://:9094
+	listeners=PLAINTEXT://0.0.0.0:9094
 	log.dirs=/tmp/kafka-logs-2
 ```
 
