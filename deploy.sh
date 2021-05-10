@@ -12,7 +12,7 @@ DIST='docs/.vuepress/dist'
 # 源文档发布
 git add -A
 git commit -m "$message"
-#git push https://github.com/PeterWangYong/techBook.git master
+git push https://github.com/PeterWangYong/techBook.git master
 git push https://gitee.com/PeterWangYong/tech-book.git master
 
 # 生成静态文件
@@ -33,5 +33,5 @@ git commit -m 'deploy'
 # 发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/PeterWangYong/techBook.git master:gh-pages
 # git push -f https://gitee.com/PeterWangYong/tech-book.git master:gh-pages
-# git push -f https://github.com/PeterWangYong/peterwangyong.github.io.git master
+git push -f https://github.com/PeterWangYong/peterwangyong.github.io.git master
 git push -f https://gitee.com/PeterWangYong/PeterWangYong.git master
